@@ -1,0 +1,11 @@
+include ':EaseUI'
+project(':EaseUI').projectDir = new File('../easeui')
+include ':Redpacketlibrary'
+project(':Redpacketlibrary').projectDir = new File('../redpacketlibrary')
+
+
+
+
+//release时需要把下面的include相关的两行注释掉
+//include ':hyphenatechatsdk'
+//project(':hyphenatechatsdk').projectDir = new File('../emclient-android/hyphenatechatsdk')
