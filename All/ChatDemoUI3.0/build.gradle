@@ -4,7 +4,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.1'
+
+        classpath 'com.android.tools.build:gradle:2.3.2'
     }
 }
 
@@ -19,13 +20,13 @@ apply plugin: 'com.android.application'
 
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
         applicationId "com.easemob.chatuidemo"
         minSdkVersion 9
-        targetSdkVersion 22
+        targetSdkVersion 25
         multiDexEnabled true
     }
 
@@ -69,8 +70,9 @@ android {
 }
 
 dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':Redpacketlibrary')
    // compile project(':EaseUI')
-    compile fileTree(include: '*.jar', exclude: 'android-support-multidex.jar', dir: 'libs')
+    //compile fileTree(include: '*.jar', exclude: 'android-support-multidex.jar', dir: 'libs')
 
 }
